@@ -1,10 +1,11 @@
-@import "mixins/variables";
+@import "helper/variables";
+@import "helper/responsive";
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: $font-secondary;
+    font-family: $font-secondary, sans-serif;
 }
 
 h1,
@@ -13,8 +14,14 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font-primary;
+    font-family: $font-primary, sans-serif;
     font-weight: 600;
+}
+
+h1 {
+    @include media-phone-sm {
+        font-size: 3.2em;
+    }
 }
 
 label {
@@ -50,6 +57,7 @@ label {
             left: 0;
             width: 130px;
             border-bottom: 3px solid;
+            color: $color-secondary;
         }
     }
 }
@@ -59,6 +67,26 @@ label {
     background-size: cover;
     background-attachment: fixed;
     color: white;
+
+    .first-title {
+        @include media-phone {
+            font-size: 3.2em;
+        }
+
+        @include media-phone-sm {
+            font-size: 2.2em;
+        }
+    }
+
+    .first-sub-title {
+        @include media-phone {
+            font-size: 2.2em;
+        }
+
+        @include media-phone-sm {
+            font-size: 1.2em;
+        }
+    }
 }
 .subscription-form {
     display: grid;
@@ -127,15 +155,22 @@ label {
 }
 
 .why-us {
-    background: $color-tertiary;
+    background: $color-primary;
     color: white;
     .services-container {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        @include media-tablet {
+            justify-content: center;
+        }
         .service {
             width: 300px;
             margin: 20px 0;
+            @include media-tablet {
+                margin: 20px;
+                text-align: center;
+            }
             .service-in-words {
                 font-size: 1.4em;
                 text-transform: capitalize;
@@ -149,17 +184,24 @@ label {
         .step {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
             font-size: 1.2em;
-
-            figure {
+            @include media-tablet {
+                flex-direction: column;
+            }
+            figure.icon-container {
                 margin: 20px;
+                @include media-phone {
+                    margin: 20px auto;
+                }
                 .step-icon {
                     border-radius: 50%;
                     padding: 25px;
                     font-size: 8.5em;
-                    background: linear-gradient(45deg, $color-secondary 50%,#3F51B5 );
-                    color:white;
+                    background: linear-gradient(45deg, $color-secondary 50%, $color-primary);
+                    color: white;
+                    @include media-tablet {
+                        font-size: 4.5em;
+                    }
                 }
             }
 

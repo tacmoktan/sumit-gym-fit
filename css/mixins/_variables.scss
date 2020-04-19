@@ -1,0 +1,23 @@
+//palette
+$color-primary: #2c806f;
+$color-secondary: #36c2f3;
+$color-tertiary: #5ba56e;
+$color-extra: #69409e;
+
+//fonts
+@font-face {
+    font-family: "avenir-next";
+    src: url("../../fonts/avenir-next/AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "gilroy";
+    src: url("../../fonts/Gilroy/Gilroy-Light.otf");
+}
+
+$font-primary: "gilroy";
+$font-secondary: "avenir-next";
+
+
+//
+$max-content-width: 1140px;

@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "avenir-next";
+  src: url("../../fonts/avenir-next/AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "gilroy";
+  src: url("../../fonts/Gilroy/Gilroy-Light.otf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "avenir-next";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "gilroy";
+}
+
+label {
+  display: block;
+}
+
+#header {
+  width: 100%;
+  background: #2c806f;
+  padding: 20px;
+}
+
+.content-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 20px;
+}
+
+.subscription-form {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 10px;
+  margin: 40px 0;
+}
+
+.subscription-form .input-field input[type="email"] {
+  border-radius: 5px;
+  margin: 10px 0;
+  height: 50px;
+  border: 1px solid #9e9e9e;
+  width: 50%;
+  min-width: 260px;
+  padding: 0 10px;
+}
+
+.subscription-form .input-field input[type="email"]:focus {
+  border: 1px solid #36c2f3;
+  -webkit-box-shadow: 0 0 2px #36c2f3;
+          box-shadow: 0 0 2px #36c2f3;
+}
+
+.subscription-form .input-field input[type="email"].validate + label {
+  margin-top: 25px;
+  padding: 0 14px;
+}
+
+.subscription-form .input-field label {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.subscription-form .input-field .active {
+  color: #2c806f;
+}
+
+.subscription-form .form-radio input[type="radio"]:checked + span:after {
+  background: #36c2f3;
+  border: 2px solid #36c2f3;
+}
+
+.subscription-form .form-radio input[type="radio"]:checked + span {
+  color: black;
+}
+
+.subscription-form .subscribe-btn {
+  background: #36c2f3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.subscription-form .subscribe-btn:hover {
+  background: #0eb0e8;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,11 +1,11 @@
 @font-face {
   font-family: "avenir-next";
-  src: url("../../fonts/avenir-next/AvenirNextLTPro-Regular.otf");
+  src: url("../../fonts/avenir-next/AvenirNextLTPro-Regular.woff");
 }
 
 @font-face {
   font-family: "gilroy";
-  src: url("../../fonts/Gilroy/Gilroy-Light.otf");
+  src: url("../../fonts/Gilroy/gilroy-light-webfont.woff");
 }
 
 * {

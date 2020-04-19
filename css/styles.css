@@ -23,10 +23,19 @@ h4,
 h5,
 h6 {
   font-family: "gilroy";
+  font-weight: 600;
 }
 
 label {
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #c4c4c4;
+}
+
+.material-icons {
+  font-size: 6.5em;
 }
 
 #header {
@@ -44,6 +53,30 @@ label {
   padding: 20px;
 }
 
+.section .section-title {
+  text-transform: capitalize;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.section .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 130px;
+  border-bottom: 3px solid;
+}
+
+.subscribe-us {
+  background-image: url(https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
 .subscription-form {
   display: -ms-grid;
   display: grid;
@@ -51,20 +84,26 @@ label {
   margin: 40px 0;
 }
 
+.subscription-form .sub-info .info-highlight {
+  color: #36c2f3;
+  font-size: 1em;
+  font-style: italic;
+}
+
 .subscription-form .input-field input[type="email"] {
   border-radius: 5px;
   margin: 10px 0;
   height: 50px;
-  border: 1px solid #9e9e9e;
+  border: 2px solid #9e9e9e;
   width: 50%;
   min-width: 260px;
   padding: 0 10px;
 }
 
 .subscription-form .input-field input[type="email"]:focus {
-  border: 1px solid #36c2f3;
-  -webkit-box-shadow: 0 0 2px #36c2f3;
-          box-shadow: 0 0 2px #36c2f3;
+  border: 2px solid #36c2f3;
+  -webkit-box-shadow: 0 0 3px #36c2f3;
+          box-shadow: 0 0 3px #36c2f3;
 }
 
 .subscription-form .input-field input[type="email"].validate + label {
@@ -81,13 +120,17 @@ label {
   color: #2c806f;
 }
 
-.subscription-form .form-radio input[type="radio"]:checked + span:after {
-  background: #36c2f3;
-  border: 2px solid #36c2f3;
+.subscription-form .form-radio input[type="radio"]:not(checked) + span:before {
+  border-color: #c4c4c4;
 }
 
 .subscription-form .form-radio input[type="radio"]:checked + span {
-  color: black;
+  color: white;
+}
+
+.subscription-form .form-radio input[type="radio"]:checked + span:after {
+  background: #36c2f3;
+  border: 2px solid #36c2f3;
 }
 
 .subscription-form .subscribe-btn {
@@ -99,5 +142,59 @@ label {
 
 .subscription-form .subscribe-btn:hover {
   background: #0eb0e8;
+}
+
+.why-us {
+  background: #5ba56e;
+  color: white;
+}
+
+.why-us .services-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.why-us .services-container .service {
+  width: 300px;
+  margin: 20px 0;
+}
+
+.why-us .services-container .service .service-in-words {
+  font-size: 1.4em;
+  text-transform: capitalize;
+}
+
+.how-it-works .steps-container .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 1.2em;
+}
+
+.how-it-works .steps-container .step figure {
+  margin: 20px;
+}
+
+.how-it-works .steps-container .step figure .step-icon {
+  border-radius: 50%;
+  padding: 25px;
+  font-size: 8.5em;
+  background: linear-gradient(45deg, #36c2f3 50%, #3F51B5);
+  color: white;
+}
+
+.how-it-works .steps-container .step .steps-in-detail {
+  margin: 20px;
 }
 /*# sourceMappingURL=styles.css.map */

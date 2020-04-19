@@ -14,10 +14,17 @@ h4,
 h5,
 h6 {
     font-family: $font-primary;
+    font-weight: 600;
 }
 
 label {
     display: block;
+    width: fit-content;
+    color: #c4c4c4;
+}
+
+.material-icons {
+    font-size: 6.5em;
 }
 
 #header {
@@ -32,25 +39,51 @@ label {
 }
 .section {
     padding: 20px;
+    .section-title {
+        text-transform: capitalize;
+        position: relative;
+        width: fit-content;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 130px;
+            border-bottom: 3px solid;
+        }
+    }
 }
 
+.subscribe-us {
+    background-image: url(https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
 .subscription-form {
     display: grid;
     grid-row-gap: 10px;
     margin: 40px 0;
+    .sub-info {
+        .info-highlight {
+            color: $color-secondary;
+            font-size: 1em;
+            font-style: italic;
+        }
+    }
     //overriding materialize
     .input-field {
         input[type="email"] {
             border-radius: 5px;
             margin: 10px 0;
             height: 50px;
-            border: 1px solid #9e9e9e;
+            border: 2px solid #9e9e9e;
             width: 50%;
             min-width: 260px;
             padding: 0 10px;
             &:focus {
-                border: 1px solid $color-secondary;
-                box-shadow: 0 0 2px $color-secondary;
+                border: 2px solid $color-secondary;
+                box-shadow: 0 0 3px $color-secondary;
             }
         }
 
@@ -69,13 +102,18 @@ label {
     }
 
     .form-radio {
-        input[type="radio"]:checked + span:after {
-            background: $color-secondary;
-            border: 2px solid $color-secondary;
+        input[type="radio"]:not(checked) + span {
+            &:before {
+                border-color: #c4c4c4;
+            }
         }
+        input[type="radio"]:checked + span {
+            color: white;
 
-        input[type="radio"]:checked + span{
-            color:black;
+            &:after {
+                background: $color-secondary;
+                border: 2px solid $color-secondary;
+            }
         }
     }
 
@@ -84,6 +122,50 @@ label {
         width: fit-content;
         &:hover {
             background: darken($color-secondary, 10%);
+        }
+    }
+}
+
+.why-us {
+    background: $color-tertiary;
+    color: white;
+    .services-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .service {
+            width: 300px;
+            margin: 20px 0;
+            .service-in-words {
+                font-size: 1.4em;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.how-it-works {
+    .steps-container {
+        .step {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 1.2em;
+
+            figure {
+                margin: 20px;
+                .step-icon {
+                    border-radius: 50%;
+                    padding: 25px;
+                    font-size: 8.5em;
+                    background: linear-gradient(45deg, $color-secondary 50%,#3F51B5 );
+                    color:white;
+                }
+            }
+
+            .steps-in-detail {
+                margin: 20px;
+            }
         }
     }
 }

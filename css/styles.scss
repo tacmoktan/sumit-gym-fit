@@ -155,7 +155,7 @@ label {
 }
 
 .why-us {
-    background: $color-primary;
+    background: linear-gradient(-45deg, $color-secondary 50%, $color-primary);
     color: white;
     .services-container {
         display: flex;

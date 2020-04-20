@@ -58,6 +58,9 @@ label {
             width: 130px;
             border-bottom: 3px solid;
             color: $color-secondary;
+            @include media-phone-sm{
+                width:95px;
+            }
         }
     }
 }
@@ -102,6 +105,7 @@ label {
     //overriding materialize
     .input-field {
         input[type="email"] {
+            color:white;
             border-radius: 5px;
             margin: 10px 0;
             height: 50px;

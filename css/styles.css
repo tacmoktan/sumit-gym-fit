@@ -79,6 +79,12 @@ label {
   color: #36c2f3;
 }
 
+@media (max-width: 420px) {
+  .section .section-title::after {
+    width: 95px;
+  }
+}
+
 .subscribe-us {
   background-image: url(https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
@@ -124,6 +130,7 @@ label {
 }
 
 .subscription-form .input-field input[type="email"] {
+  color: white;
   border-radius: 5px;
   margin: 10px 0;
   height: 50px;

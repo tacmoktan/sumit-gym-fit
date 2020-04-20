@@ -8,12 +8,12 @@ $color-extra: #69409e;
 //fonts
 @font-face {
     font-family: "avenir-next";
-    src: url("../../fonts/AvenirNextLTPro-Regular.woff");
+    src: url("../fonts/AvenirNextLTPro-Regular.woff");          /* with respect to css directory */
 }
 
 @font-face {
     font-family: "gilroy";
-    src: url("../../fonts/Gilroy-Light.woff");
+    src: url("../fonts/Gilroy-Light.woff");                     /* with respect to css directory */
 }
 
 $font-primary: "gilroy";

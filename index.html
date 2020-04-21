@@ -20,9 +20,7 @@
 
 <body>
     <div class="main-container">
-        <!-- <header id="header">
-            
-        </header> -->
+
         <container class="body-container">
             <section class="section subscribe-us">
                 <div class="content-container">
@@ -32,8 +30,7 @@
                     <h1 class="first-title">Let us take care of things that get in your way.</h1>
                     <h4 class="first-sub-title">Fitness is its own type of meditation.</h4>
                     <form class="subscription-form">
-                        <div class="sub-info">Subscribe with us (<span class="info-highlight"> Be the first one to know
-                            </span>) </div>
+                        <div class="sub-info">Subscribe with us (<span class="info-highlight">Be the first one to know</span>) </div>
 
                         <label class="form-radio">
                             <input type="radio" class="form-input" name="subscription-option" />
@@ -123,13 +120,50 @@
                     </div>
                 </div>
             </section>
+
+            <section class="section contact-us">
+                <div class="content-container">
+                    <h1 class="section-title">Contact Us</h1>
+                    <form class="contact-us-form">
+                        <div class="input-field">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+
+                        <div class="input-field">
+                            <i class="material-icons prefix">
+                                email
+                            </i>
+                            <input id="email-contact-us" type="email" class="validate">
+                            <label for="email-contact-us">Email</label>
+                        </div>
+
+                        <div class="input-field">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="message" class="materialize-textarea" maxlength="250"
+                                data-length="250"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <div class="input-field">
+                            <button class="waves-effect waves-light btn send-btn">
+                                SEND
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </container>
 
-        <footer id="footer">
-
-        </footer>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let messageCount = document.querySelectorAll('#message');
+            M.CharacterCounter.init(messageCount);
+        });
+    </script>
 </body>
 
 </html>

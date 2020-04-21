@@ -36,9 +36,6 @@ h6 {
 
 label {
   display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   color: #c4c4c4;
 }
 
@@ -46,6 +43,24 @@ label {
   font-size: 6.5em;
 }
 
+.input-field {
+  max-width: 600px;
+}
+
+button.btn,
+input[type="button"].btn {
+  background: #36c2f3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+button.btn:hover,
+input[type="button"].btn:hover {
+  background: #0eb0e8;
+}
+
+/* styling css */
 #header {
   width: 100%;
   background: #3f51b5;
@@ -135,9 +150,11 @@ label {
   margin: 10px 0;
   height: 50px;
   border: 2px solid #9e9e9e;
-  width: 50%;
-  min-width: 260px;
   padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .subscription-form .input-field input[type="email"]:focus {
@@ -171,17 +188,6 @@ label {
 .subscription-form .form-radio input[type="radio"]:checked + span:after {
   background: #36c2f3;
   border: 2px solid #36c2f3;
-}
-
-.subscription-form .subscribe-btn {
-  background: #36c2f3;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.subscription-form .subscribe-btn:hover {
-  background: #0eb0e8;
 }
 
 .why-us {
@@ -270,5 +276,44 @@ label {
 
 .how-it-works .steps-container .step .steps-in-detail {
   margin: 20px;
+}
+
+.contact-us {
+  background-image: url(https://images.pexels.com/photos/1390403/pexels-photo-1390403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: top left;
+}
+
+.contact-us .contact-us-form .input-field input[type="text"]:focus,
+.contact-us .contact-us-form .input-field input[type="email"]:focus,
+.contact-us .contact-us-form .input-field textarea:focus {
+  border-color: #36c2f3;
+  -webkit-box-shadow: 0 1px 0 0 #36c2f3;
+          box-shadow: 0 1px 0 0 #36c2f3;
+}
+
+.contact-us .contact-us-form .input-field textarea {
+  height: 100px;
+}
+
+.contact-us .contact-us-form .input-field input[type="text"] + label,
+.contact-us .contact-us-form .input-field input[type="email"] + label,
+.contact-us .contact-us-form .input-field textarea#message + label {
+  width: auto;
+}
+
+.contact-us .contact-us-form .input-field .prefix.active {
+  color: #36c2f3;
+}
+
+.contact-us .contact-us-form .input-field .send-btn {
+  margin-left: 43.5px;
+  /* icon size */
+}
+
+/*using textarea generates hiddendiv automatically 
+that effects responsiveness so to avoid that*/
+.hiddendiv.common {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
